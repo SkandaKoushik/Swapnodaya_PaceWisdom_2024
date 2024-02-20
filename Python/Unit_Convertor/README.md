@@ -1,6 +1,6 @@
 # Unit Converter
 
-With the `unit conversion` file, you can perform all types of unit conversions such as `length`, `mass`, `temperature`, `Time`, `Energy`, `Pressure` and `speed` in a fraction of a second without the need to memorize mathematical formulas and without performing calculations.
+With the `unit conversion` file, you can perform all types of unit conversions such as `length`, `area`, `mass`, `temperature`, `Time`, `Energy`, `Pressure` and `speed` in a fraction of a second without the need to memorize mathematical formulas and without performing calculations.
 # Converting Modes
 #### - length mode:
 * Centimeter
@@ -42,8 +42,11 @@ With the `unit conversion` file, you can perform all types of unit conversions s
 * Bar
 * Pascal
 * Standard atmosphere
+***
+#### - Pressure mode:
+* Square Feet
+* Square Meter
+* Hectre
+* Acres
 # How to use
-run `main.py` without any requirments.
-# Contributors
-##### [Sina Hajizadeh](https://github.com/sinahajizadeh)
-##### [Farnam Javadi](https://www.farnamjavadi.com)
+run `Unit_Convertor.py` without any requirments.
