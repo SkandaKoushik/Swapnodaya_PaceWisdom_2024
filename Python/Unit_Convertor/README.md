@@ -43,7 +43,7 @@ With the `unit conversion` file, you can perform all types of unit conversions s
 * Pascal
 * Standard atmosphere
 ***
-#### - Pressure mode:
+#### - Area mode:
 * Square Feet
 * Square Meter
 * Hectre
