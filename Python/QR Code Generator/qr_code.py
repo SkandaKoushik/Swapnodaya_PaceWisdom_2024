@@ -1,6 +1,6 @@
 import qrcode
 
-def generate_qrcode(url, file_name):
+def generate_qrcode(data, file_name):
     
     qr = qrcode.QRCode(
         version=3,
@@ -9,7 +9,7 @@ def generate_qrcode(url, file_name):
         error_correction=qrcode.constants.ERROR_CORRECT_H
     )
     
-    qr.add_data(url)
+    qr.add_data(data)
     qr.make(fit=True)
     
     img = qr.make_image(fill_color='black', back_color='white')
@@ -17,8 +17,8 @@ def generate_qrcode(url, file_name):
     
 
 if __name__ == '__main__':   
-    url = input('Enter an URL: ')
+    data = input('Enter an Data: ')
     file_name = input('Enter File Name: ')
     
-    generate_qrcode(url, file_name)
+    generate_qrcode(data, file_name)
 
