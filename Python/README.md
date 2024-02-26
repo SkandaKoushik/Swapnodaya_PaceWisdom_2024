@@ -85,14 +85,20 @@ Modify `__main__` to select the type of players.
 `compose.py`: Compose a random paragraph of the required number of words.
 
 ***
-
-
 ### [Unit Convertor](https://github.com/SkandaKoushik/Swapnodaya_PaceWisdom_2024/tree/134143c5cc89d5e158c8f0f04692deac3c5c481b/Python/Unit_Convertor)
 
 Convert Values from one unit to another. <br>
 Details in the Folder.
 
 
+***
+### [QR Code Generator](https://github.com/SkandaKoushik/Swapnodaya_PaceWisdom_2024/tree/5d89c26d70260d0980413a070bce9e22a9f92fd2/Python/QR%20Code%20Generator)
+
+`qr_code.py`: Generate QR Code for user data <br>
+`google.png`: Example QR Code of `google.com`
+
+
+***
 
 # Credits
 
