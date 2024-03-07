@@ -1,0 +1,150 @@
+/* Base styles */
+body {
+    font-family:'Lucida Sans';
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 0;
+}
+
+/* Navigation bar styles */
+.navbar {
+    display: flex; /* Make the navigation bar items display horizontally */
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 10px;
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.navbar a {
+    text-decoration: none; /* Remove underline from links */
+    color: black;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.navbar a:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.front {
+    margin: 3%;
+    margin-top: 1%;
+
+}
+
+.front img {
+    width: 100%;
+    max-height: 550px;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.wrapper{
+    flex: 1;
+    padding: 3px;
+}
+
+.wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 5px auto;
+    width: 75%;
+}
+
+.product-card {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+    flex: 1;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.product-card p {
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-weight: bold;
+}
+
+.product-card button {
+    background-color: black;
+    color: #fff;
+    padding: 5px 20%;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14pt;
+}
+
+
+.footer {
+    background-color: #f7f7f7;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.footer-grid {
+    border-left: solid white 2px;
+    border-right: solid white 2px;
+    padding: 10px;
+    text-align: center;
+    margin: 0px;
+    flex: 1;
+}
+
+.footer-grid ul {
+    list-style: none;
+}
+
+.footer-grid ul li a{
+    text-align: left;
+
+}
