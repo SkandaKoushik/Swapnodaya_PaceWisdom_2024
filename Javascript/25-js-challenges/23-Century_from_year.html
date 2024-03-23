@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Determine Century</title>
+</head>
+<body>
+    <h2>Determine Century</h2>
+    <label for="yearInput">Enter a year: </label>
+    <input type="number" id="yearInput">
+    <br><br>
+    <button onclick="determineCentury()">Determine Century</button>
+    <p id="centuryResult"></p>
+
+    <script>
+        function century(year) {
+            return Math.ceil(year / 100);
+        }
+
+        function determineCentury() {
+            var year = parseInt(document.getElementById("yearInput").value);
+            var centuryNum = century(year);
+            document.getElementById("centuryResult").innerText = "Century: " + centuryNum;
+        }
+    </script>
+</body>
+</html>

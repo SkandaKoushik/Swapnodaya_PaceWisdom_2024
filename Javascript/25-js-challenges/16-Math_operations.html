@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Operations</title>
+</head>
+<body>
+    <h2>Basic Operations</h2>
+    <label for="operation">Choose an operation:</label>
+    <select id="operation">
+        <option value="+">Addition (+)</option>
+        <option value="-">Subtraction (-)</option>
+        <option value="*">Multiplication (*)</option>
+        <option value="/">Division (/)</option>
+    </select>
+    <br><br>
+    <label for="value1">Enter first value: </label>
+    <input type="number" id="value1">
+    <br><br>
+    <label for="value2">Enter second value: </label>
+    <input type="number" id="value2">
+    <br><br>
+    <button onclick="performOperation()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        function basicOp(op, v1, v2) {
+            switch (op) {
+                case '+': return v1 + v2;
+                case '-': return v1 - v2;
+                case '*': return v1 * v2;
+                case '/': 
+                    if (v2 === 0) return 'Error';
+                    return v1 / v2;
+            }
+        }
+
+        function performOperation() {
+            var operation = document.getElementById("operation").value;
+            var value1 = parseFloat(document.getElementById("value1").value);
+            var value2 = parseFloat(document.getElementById("value2").value);
+            var result = basicOp(operation, value1, value2);
+            document.getElementById("result").innerText = "Result: " + result;
+        }
+    </script>
+</body>
+</html>

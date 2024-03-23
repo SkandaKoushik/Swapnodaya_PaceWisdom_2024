@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Years to Cat and Dog Years</title>
+</head>
+<body>
+    <h2>Human Years to Cat and Dog Years</h2>
+    <label for="humanYearsInput">Enter your age in human years: </label>
+    <input type="number" id="humanYearsInput">
+    <br><br>
+    <button onclick="calculateYears()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        var humanYearsCatYearsDogYears = function(humanYears) {
+            let cat = 0, dog = 0;
+
+            for (let i = 1; i <= humanYears; i++) {
+                if (i === 1) {
+                    cat += 15;
+                    dog += 15;
+                } else if (i === 2) {
+                    cat += 9;
+                    dog += 9;
+                } else {
+                    cat += 4;
+                    dog += 5;
+                }
+            }
+            return [humanYears, cat, dog];
+        }
+
+        function calculateYears() {
+            var humanYears = parseInt(document.getElementById("humanYearsInput").value);
+            var result = humanYearsCatYearsDogYears(humanYears);
+            document.getElementById("result").innerText = "In human years: " + result[0] + ", in cat years: " + result[1] + ", in dog years: " + result[2];
+        }
+    </script>
+</body>
+</html>

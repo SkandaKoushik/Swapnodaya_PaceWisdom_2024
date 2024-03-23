@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Positive Numbers</title>
+</head>
+<body>
+    <h2>Sum of Positive Numbers</h2>
+    <label for="numberArrayInput">Enter an array of numbers (comma-separated): </label>
+    <input type="text" id="numberArrayInput">
+    <br><br>
+    <button onclick="calculatePositiveSum()">Calculate Sum</button>
+    <p id="positiveSumResult"></p>
+
+    <script>
+        function positiveSum(arr) {
+            let sum = 0;
+            arr.forEach(function(i) {
+                if (i > 0) sum += i;
+            });
+            return sum;
+        }
+
+        function calculatePositiveSum() {
+            var inputArray = document.getElementById("numberArrayInput").value.split(",").map(Number);
+            var sum = positiveSum(inputArray);
+            document.getElementById("positiveSumResult").innerText = "Sum of positive numbers: " + sum;
+        }
+    </script>
+</body>
+</html>

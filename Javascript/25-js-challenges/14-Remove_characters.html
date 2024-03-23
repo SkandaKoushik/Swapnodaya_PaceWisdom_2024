@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Characters</title>
+</head>
+<body>
+    <h2>Remove Characters</h2>
+    <label for="stringInput">Enter a string: </label>
+    <input type="text" id="stringInput">
+    <br><br>
+    <button onclick="removeCharacters()">Remove Characters</button>
+    <p id="modifiedString"></p>
+
+    <script>
+        function removeChar(str) {
+            return str.substring(1, str.length - 1);
+        }
+
+        function removeCharacters() {
+            var inputString = document.getElementById("stringInput").value;
+            var modifiedStr = removeChar(inputString);
+            document.getElementById("modifiedString").innerText = "Modified string: " + modifiedStr;
+        }
+    </script>
+</body>
+</html>

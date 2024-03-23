@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Negative</title>
+</head>
+<body>
+    <h2>Make Negative</h2>
+    <label for="numberInput">Enter a number: </label>
+    <input type="number" id="numberInput">
+    <br><br>
+    <button onclick="convertToNegative()">Make Negative</button>
+    <p id="negativeNumber"></p>
+
+    <script>
+        function makeNegative(num) {
+            return num < 0 ? num : -num;
+        }
+
+        function convertToNegative() {
+            var inputNumber = parseInt(document.getElementById("numberInput").value);
+            var negativeResult = makeNegative(inputNumber);
+            document.getElementById("negativeNumber").innerText = "Negative number: " + negativeResult;
+        }
+    </script>
+</body>
+</html>

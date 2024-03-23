@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Sheeps</title>
+</head>
+<body>
+    <h2>Count Sheeps</h2>
+    <label for="sheepInput">Enter array of sheep (true/false): </label>
+    <input type="text" id="sheepInput">
+    <br><br>
+    <button onclick="countSheeps()">Count</button>
+    <p id="sheepCount"></p>
+
+    <script>
+        function countSheeps() {
+            var inputSheeps = document.getElementById("sheepInput").value;
+            
+            var sheeps = JSON.parse("[" + inputSheeps + "]");
+            var count = 0;
+            for (let i = 0; i < sheeps.length; i++) {
+                if (sheeps[i] === true) count++;
+            }
+            document.getElementById("sheepCount").innerText = "Number of sheeps: " + count;
+        }
+    </script>
+</body>
+</html>

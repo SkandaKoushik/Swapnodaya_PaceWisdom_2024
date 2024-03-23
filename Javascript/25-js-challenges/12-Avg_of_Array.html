@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Average Marks</title>
+</head>
+<body>
+    <h2>Calculate Average Marks</h2>
+    <label for="marksInput">Enter marks (comma-separated): </label>
+    <input type="text" id="marksInput">
+    <br><br>
+    <button onclick="calculateAverage()">Calculate Average</button>
+    <p id="averageResult"></p>
+
+    <script>
+        function getAverage(marks){
+            let sum = 0;
+            marks.forEach(function(m) {
+                sum += m;
+            });
+            return Math.floor(sum / marks.length);
+        }
+
+        function calculateAverage() {
+            var marks = document.getElementById("marksInput").value.split(",").map(Number);
+            var average = getAverage(marks);
+            document.getElementById("averageResult").innerText = "Average marks: " + average;
+        }
+    </script>
+</body>
+</html>

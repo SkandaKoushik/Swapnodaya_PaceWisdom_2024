@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Points</title>
+</head>
+<body>
+    <h2>Calculate Points</h2>
+    <label for="gamesInput">Enter the scores of games (format: teamA:teamB, separated by commas): </label>
+    <input type="text" id="gamesInput">
+    <br><br>
+    <button onclick="calculatePoints()">Calculate Points</button>
+    <p id="pointsResult"></p>
+
+    <script>
+        function points(games) {
+            let s = 0;
+            games.forEach(function(score) {
+                const [x, y] = score.split(':').map(Number);
+                if (x > y) s += 3;
+                else if (x === y) s += 1;
+                else s += 0;
+            });
+            return s;
+        }
+
+        function calculatePoints() {
+            var gamesInput = document.getElementById("gamesInput").value;
+            var games = gamesInput.split(",").map(function(item) {
+                return item.trim(); // Remove leading/trailing whitespace
+            });
+            var totalPoints = points(games);
+            document.getElementById("pointsResult").innerText = "Total points earned: " + totalPoints;
+        }
+    </script>
+</body>
+</html>

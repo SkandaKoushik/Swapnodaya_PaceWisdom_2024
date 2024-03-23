@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Arrays</title>
+</head>
+<body>
+    <h2>Sum of Arrays</h2>
+    <label for="array1Input">Enter the first array of numbers (comma-separated): </label>
+    <input type="text" id="array1Input">
+    <br><br>
+    <label for="array2Input">Enter the second array of numbers (comma-separated): </label>
+    <input type="text" id="array2Input">
+    <br><br>
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <p id="sumResult"></p>
+
+    <script>
+        function arrayPlusArray(arr1, arr2) {
+            const arr = arr1.concat(arr2);
+            return arr.reduce((acc, cur) => acc + cur);
+        }
+
+        function calculateSum() {
+            var array1 = document.getElementById("array1Input").value.split(",").map(Number);
+            var array2 = document.getElementById("array2Input").value.split(",").map(Number);
+            var sum = arrayPlusArray(array1, array2);
+            document.getElementById("sumResult").innerText = "Sum of arrays: " + sum;
+        }
+    </script>
+</body>
+</html>

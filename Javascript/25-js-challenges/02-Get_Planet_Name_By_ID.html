@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Planet Name</title>
+</head>
+<body>
+    <h2>Get Planet Name</h2>
+    <label for="planetId">Enter Planet ID (1-8): </label>
+    <input type="number" id="planetId" min="1" max="8">
+    <button onclick="showPlanetName()">Get Name</button>
+    <p id="planetName"></p>
+
+    <script>
+        function getPlanetName(id) {
+            var name;
+            switch (id) {
+                case 1:
+                    name = 'Mercury';
+                    break;
+                case 2:
+                    name = 'Venus';
+                    break;
+                case 3:
+                    name = 'Earth';
+                    break;
+                case 4:
+                    name = 'Mars';
+                    break;
+                case 5:
+                    name = 'Jupiter';
+                    break;
+                case 6:
+                    name = 'Saturn';
+                    break;
+                case 7:
+                    name = 'Uranus';
+                    break;
+                case 8:
+                    name = 'Neptune';
+                    break;
+                default:
+                    name = 'Invalid ID';
+            }
+            return name;
+        }
+
+        function showPlanetName() {
+            var planetId = document.getElementById("planetId").value;
+            var planetName = getPlanetName(parseInt(planetId));
+            document.getElementById("planetName").innerText = planetName;
+        }
+    </script>
+</body>
+</html>

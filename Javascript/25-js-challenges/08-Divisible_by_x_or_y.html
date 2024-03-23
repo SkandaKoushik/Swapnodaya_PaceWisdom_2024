@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisibility Check</title>
+</head>
+<body>
+    <h2>Divisibility Check</h2>
+    <label for="numberN">Enter number N: </label>
+    <input type="number" id="numberN">
+    <br><br>
+    <label for="numberX">Enter number X: </label>
+    <input type="number" id="numberX">
+    <br><br>
+    <label for="numberY">Enter number Y: </label>
+    <input type="number" id="numberY">
+    <br><br>
+    <button onclick="checkDivisibility()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function isDivisible(n, x, y) {
+            return ((n % x === 0) && (n % y === 0));
+        }
+
+        function checkDivisibility() {
+            var n = parseInt(document.getElementById("numberN").value);
+            var x = parseInt(document.getElementById("numberX").value);
+            var y = parseInt(document.getElementById("numberY").value);
+            var isDivisibleResult = isDivisible(n, x, y);
+            var message = isDivisibleResult ? "Yes, " + n + " is divisible by both " + x + " and " + y + "." : "No, " + n + " is not divisible by both " + x + " and " + y + ".";
+            document.getElementById("result").innerText = message;
+        }
+    </script>
+</body>
+</html>

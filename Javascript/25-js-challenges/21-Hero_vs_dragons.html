@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero vs Dragons</title>
+</head>
+<body>
+    <h2>Hero vs Dragons</h2>
+    <label for="bulletsInput">Enter the number of bullets: </label>
+    <input type="number" id="bulletsInput">
+    <br><br>
+    <label for="dragonsInput">Enter the number of dragons: </label>
+    <input type="number" id="dragonsInput">
+    <br><br>
+    <button onclick="checkHero()">Check</button>
+    <p id="heroResult"></p>
+
+    <script>
+        function hero(bullets, dragons) {
+            return bullets >= dragons * 2;
+        }
+
+        function checkHero() {
+            var bullets = parseInt(document.getElementById("bulletsInput").value);
+            var dragons = parseInt(document.getElementById("dragonsInput").value);
+            var result = hero(bullets, dragons);
+            var message = result ? "The hero has enough bullets to defeat the dragons!" : 
+                    "The hero doesn't have enough bullets to defeat the dragons.";
+            document.getElementById("heroResult").innerText = message;
+        }
+    </script>
+</body>
+</html>

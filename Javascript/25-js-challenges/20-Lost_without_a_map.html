@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Numbers in Array</title>
+</head>
+<body>
+    <h2>Double Numbers in Array</h2>
+    <label for="arrayInput">Enter an array of numbers (comma-separated): </label>
+    <input type="text" id="arrayInput">
+    <br><br>
+    <button onclick="doubleNumbers()">Double Numbers</button>
+    <p id="doubledResult"></p>
+
+    <script>
+        function maps(x) {
+            return x.map(n => n * 2);
+        }
+
+        function doubleNumbers() {
+            var inputArray = document.getElementById("arrayInput").value.split(",").map(Number);
+            var result = maps(inputArray);
+            document.getElementById("doubledResult").innerText = "Doubled array: " + JSON.stringify(result);
+        }
+    </script>
+</body>
+</html>

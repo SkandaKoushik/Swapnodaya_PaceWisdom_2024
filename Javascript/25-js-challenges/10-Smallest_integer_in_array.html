@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Smallest Integer</title>
+</head>
+<body>
+    <h2>Find Smallest Integer</h2>
+    <label for="integerArrayInput">Enter an array of integers (comma-separated): </label>
+    <input type="text" id="integerArrayInput">
+    <br><br>
+    <button onclick="findSmallestInteger()">Find Smallest</button>
+    <p id="smallestInteger"></p>
+
+    <script>
+        function findSmallestInt(args) {
+            return Math.min(...args);
+        }
+
+        function findSmallestInteger() {
+            var inputArray = document.getElementById("integerArrayInput").value.split(",").map(Number);
+            var smallestInt = findSmallestInt(inputArray);
+            document.getElementById("smallestInteger").innerText = "Smallest integer: " + smallestInt;
+        }
+    </script>
+</body>
+</html>

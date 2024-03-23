@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summation of Integers</title>
+</head>
+<body>
+    <h2>Summation of Integers</h2>
+    <label for="numberInput">Enter a number: </label>
+    <input type="number" id="numberInput">
+    <br><br>
+    <button onclick="calculateSummation()">Calculate Summation</button>
+    <p id="summationResult"></p>
+
+    <script>
+        var summation = function (num) {
+            return (num * (num + 1)) / 2;
+        }
+
+        function calculateSummation() {
+            var inputNumber = parseInt(document.getElementById("numberInput").value);
+            var result = summation(inputNumber);
+            document.getElementById("summationResult").innerText = "Summation of integers up to " + inputNumber + ": " + result;
+        }
+    </script>
+</body>
+</html>
