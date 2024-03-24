@@ -1,22 +1,14 @@
-# Mini Projects
+# Kanban Board
 
-It Contains 3 mini projects on javascript.
-<br>
+An Simple Project Organization Board.
 
-### Calculator
-https://skandakoushik.github.io/js-mini-projects/calculator/
+It contains area to have elements or events in `Not Started`, `In process`, `Completed`.
+
+
+Host Link: https://skandakoushik.github.io/kanban-board/
 <br><br>
-
-### Digital Clock
-https://skandakoushik.github.io/js-mini-projects/clock/
-<br><br>
-
-### To Do List
-https://skandakoushik.github.io/js-mini-projects/to-do-list/
-<br><br><br>
 
 
 ## References
-https://www.youtube.com/watch?v=FfT3KsqhwVo
-
+https://www.youtube.com/watch?v=ijQ6dCughW8
 
